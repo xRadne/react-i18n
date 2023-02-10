@@ -22,15 +22,13 @@ export default function App() {
 
       <div className="App">
         <div>
+          <h1>{t('HelloWorld.text')}!</h1>
           <a href="https://vitejs.dev" target="_blank">
             <img src="/vite.svg" className="logo" alt="Vite logo" />
           </a>
           <a href="https://reactjs.org" target="_blank">
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
-        </div>
-        <div className="card">
-          <h1>{t('HelloWorld.text')}!</h1>
           <p>{t('Welcome.text')}</p>
         </div>
         <div className="card">

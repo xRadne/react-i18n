@@ -15,6 +15,8 @@ export default function App() {
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
 
+  const currentLang = i18n.language;
+
   return (
     <Suspense fallback="Loading...">
 
@@ -38,6 +40,7 @@ export default function App() {
               name="language"
               id="language-select"
               onChange={e => i18n.changeLanguage(e.target.value)}
+              value={currentLang}
             >
               {languages.map(l => <option key={l.code} value={l.code}>{l.nativeName}</option>)}
             </select>

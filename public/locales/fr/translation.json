@@ -1,0 +1,15 @@
+{
+  "HelloWorld": {
+    "text": "Bonjour le monde"
+  },
+  "Welcome": {
+    "text": "Bienvenue sur cette application d'internationalisation React"
+  },
+  "Count": {
+    "text_one": "Cliqué une fois",
+    "text_other": "Cliqué {{count}} fois"
+  },
+  "ChooseLanguage": {
+    "text": "Choisissez une langue"
+  }
+}

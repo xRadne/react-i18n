@@ -1,0 +1,16 @@
+{
+  "HelloWorld": {
+    "text": "Hej världen"
+  },
+  "Welcome": {
+    "text": "Välkommen till denna internationaliseringsapp i React"
+  },
+  "Count": {
+    "text_zero": "Inga klick än",
+    "text_one": "Klickat en gång",
+    "text_other": "Klickat {{count}} gånger"
+  },
+  "ChooseLanguage": {
+    "text": "Välj ett språk"
+  }
+}

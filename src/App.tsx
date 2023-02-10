@@ -27,13 +27,16 @@ export default function App() {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
-        <h1>{t('HelloWorld.text')}!</h1>
         <div className="card">
+          <h1>{t('HelloWorld.text')}!</h1>
           <p>{t('Welcome.text')}</p>
-
+        </div>
+        <div className="card">
           <label>
             <span>{t('ChooseLanguage.text')}: </span>
-            <select name="language" id="language-select"
+            <select
+              name="language"
+              id="language-select"
               onChange={e => i18n.changeLanguage(e.target.value)}
             >
               {languages.map(l => <option key={l.code} value={l.code}>{l.nativeName}</option>)}

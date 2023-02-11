@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 
-export function Counter() {
+export default function Counter() {
   const [count, setCount] = useState(0)
   const { t } = useTranslation()
 

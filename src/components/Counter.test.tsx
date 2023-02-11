@@ -5,7 +5,7 @@ import { I18nextProvider } from 'react-i18next'
 import { describe, expect, it } from 'vitest'
 import i18n from '../test/i18n'
 
-import { Counter } from "./Counter"
+import Counter from "./Counter"
 
 describe('Counter component', () => {
   it('should render', () => {

@@ -3,7 +3,7 @@ import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { Counter } from './components/Counter';
+import Counter from './components/Counter';
 
 const languages = [
   { code: 'en', nativeName: 'English' },
@@ -20,7 +20,7 @@ export default function App() {
     <main className="App">
       <Suspense fallback="Loading...">
         <div>
-          <h1 id='hello'>{t('HelloWorld.text')}!</h1>
+          <h1>{t('Hello world')}!</h1>
           <a href="https://vitejs.dev" target="_blank">
             <img src="/vite.svg" className="logo" alt="Vite logo" />
           </a>

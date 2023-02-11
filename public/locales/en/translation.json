@@ -1,7 +1,5 @@
 {
-  "HelloWorld": {
-    "text": "Hello world"
-  },
+  "Hello world": "Hello world",
   "Welcome": {
     "text": "Welcome to this React Internationalization App"
   },
@@ -10,7 +8,5 @@
     "text_one": "Clicked one time",
     "text_other": "Clicked {{count}} times"
   },
-  "ChooseLanguage": {
-    "text": "Choose a language"
-  }
+  "Choose a language": "Choose a language"
 }

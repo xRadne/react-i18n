@@ -21,7 +21,7 @@ export default function App() {
 
       <div className="App">
         <div>
-          <h1>{t('HelloWorld.text')}!</h1>
+          <h1 id='hello'>{t('HelloWorld.text')}!</h1>
           <a href="https://vitejs.dev" target="_blank">
             <img src="/vite.svg" className="logo" alt="Vite logo" />
           </a>

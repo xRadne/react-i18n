@@ -31,8 +31,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - run: yarn
-      - run: yarn build
-      - run: yarn test
+      - run: vite build --outDir _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 

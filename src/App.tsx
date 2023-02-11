@@ -31,7 +31,7 @@ export default function App() {
         </div>
         <div className="card">
           <label>
-            <span>{t('ChooseLanguage.text')}: </span>
+            <span>{t('Choose a language')}: </span>
             <select
               name="language"
               id="language-select"

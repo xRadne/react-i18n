@@ -15,4 +15,5 @@ export default defineConfig({
     // since parsing CSS is slow
     css: true,
   },
+  base: "./" // Allow to be deployed to a sub path ('xradne.github.io/react-i18n/')
 })

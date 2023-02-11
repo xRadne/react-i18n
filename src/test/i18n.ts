@@ -5,8 +5,8 @@ import svTranslationJson from '../../public/locales/sv/translation.json'
 
 import Backend from 'i18next-fs-backend'
 
-const DEFAULT_LANGUAGE = "en";
-const DEFAULT_NAMESPACE = "translations";
+export const DEFAULT_LANGUAGE = "en";
+export const DEFAULT_NAMESPACE = "translations";
 
 i18n
   .use(initReactI18next)

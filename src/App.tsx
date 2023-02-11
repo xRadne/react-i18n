@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, ChangeEvent } from 'react';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import reactLogo from './assets/react.svg'
@@ -17,9 +17,8 @@ export default function App() {
   const currentLang = i18n.language;
 
   return (
-    <Suspense fallback="Loading...">
-
-      <div className="App">
+    <main className="App">
+      <Suspense fallback="Loading...">
         <div>
           <h1 id='hello'>{t('HelloWorld.text')}!</h1>
           <a href="https://vitejs.dev" target="_blank">
@@ -44,7 +43,7 @@ export default function App() {
           </label>
         </div>
         <Counter />
-      </div>
-    </Suspense>
+      </Suspense>
+    </main>
   )
 }

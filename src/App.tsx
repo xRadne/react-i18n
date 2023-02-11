@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import { Suspense } from 'react';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { Counter } from './components/Counter';
 
 const languages = [
   { code: 'en', nativeName: 'English' },
@@ -12,7 +12,6 @@ const languages = [
 ];
 
 export default function App() {
-  const [count, setCount] = useState(0);
   const { t } = useTranslation();
 
   const currentLang = i18n.language;
@@ -44,9 +43,7 @@ export default function App() {
             </select>
           </label>
         </div>
-        <button onClick={() => setCount((count) => count + 1)}>
-          {t('Count.text', { count })}
-        </button>
+        <Counter />
       </div>
     </Suspense>
   )

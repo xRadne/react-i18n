@@ -11,6 +11,12 @@ const languages = [
   { code: 'sv', nativeName: 'Svenska' },
 ];
 
+const languageOptions = languages.map(l => {
+  return <option key={l.code} value={l.code}>
+    {l.flagEmoji} {l.nativeName}
+  </option>
+})
+
 export default function App() {
   const { t } = useTranslation();
 
@@ -38,7 +44,7 @@ export default function App() {
               onChange={e => i18n.changeLanguage(e.target.value)}
               value={currentLang}
             >
-              {languages.map(l => <option key={l.code} value={l.code}>{l.nativeName}</option>)}
+              {languageOptions}
             </select>
           </label>
         </div>

@@ -8,5 +8,6 @@
     "text_one": "Clicked one time",
     "text_other": "Clicked {{count}} times"
   },
-  "Choose a language": "Choose a language"
+  "Choose a language": "Choose a language",
+  "React internationalization": "React internationalization"
 }

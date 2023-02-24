@@ -8,5 +8,6 @@
     "text_one": "Klickat en gång",
     "text_other": "Klickat {{count}} gånger"
   },
-  "Choose a language": "Välj ett språk"
+  "Choose a language": "Välj ett språk",
+  "React internationalization": "Internationalisering i React"
 }

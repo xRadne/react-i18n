@@ -1,4 +1,4 @@
-import { Suspense, ChangeEvent } from 'react';
+import { Suspense, useEffect } from 'react';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import reactLogo from './assets/react.svg'
@@ -6,9 +6,9 @@ import './App.css'
 import Counter from './components/Counter';
 
 const languages = [
-  { code: 'en', nativeName: 'English' },
-  { code: 'fr', nativeName: 'Francais' },
-  { code: 'sv', nativeName: 'Svenska' },
+  { code: 'en', nativeName: 'English', flagEmoji: '🇬🇧' },
+  { code: 'fr', nativeName: 'Francais', flagEmoji: '🇫🇷' },
+  { code: 'sv', nativeName: 'Svenska', flagEmoji: '🇸🇪' },
 ];
 
 const languageOptions = languages.map(l => {
@@ -19,8 +19,13 @@ const languageOptions = languages.map(l => {
 
 export default function App() {
   const { t } = useTranslation();
-
   const currentLang = i18n.language;
+
+  useEffect(() => {
+    document.title = t('React internationalization');
+    const flag = languages.find(e => e.code === currentLang)?.flagEmoji!;
+    setTextFavicon(flag)
+  }, [t]);
 
   return (
     <main className="App">
@@ -52,4 +57,22 @@ export default function App() {
       </Suspense>
     </main>
   )
+}
+
+function svgFavicon(icon: string) {
+  return `
+  <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+    <text y=%22.9em%22 font-size=%2290%22>
+      ${icon}
+    </text>
+  </svg>
+  `.trim();
+}
+
+function setTextFavicon(text: string) {
+  const linkForFavicon = document.querySelector(
+    `head > link[rel='icon']`
+  );
+  const icon = svgFavicon(text);
+  linkForFavicon?.setAttribute(`href`, `data:image/svg+xml,${icon}`);
 }

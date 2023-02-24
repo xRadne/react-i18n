@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import I18NextBackend, { HttpBackendOptions } from 'i18next-http-backend';
 
 const options: HttpBackendOptions = {
-  loadPath: window.location.pathname + '/locales/{{lng}}/{{ns}}.json'
+  loadPath: './locales/{{lng}}/{{ns}}.json'
 }
 
 i18n
